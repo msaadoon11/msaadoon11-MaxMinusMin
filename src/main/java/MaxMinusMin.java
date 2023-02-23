@@ -1,5 +1,12 @@
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
+
+import javafx.util.converter.IntegerStringConverter;
+
+import java.util.*;
+
 
 public class MaxMinusMin {
     /**
@@ -10,6 +17,24 @@ public class MaxMinusMin {
      * @return the max value of nums minus the min value of nums.
      */
     public int difference(List<Integer> nums){
-        return 0;
+        int max = Collections.max(nums);
+        int min = Collections.min(nums);
+        
+        return (max-min);
+
+        // 2nd Way (WITHOUT COLLECTIONS package imported): VERIFY with INSTRUCTOR!
+        // int max = Integer.MAX_VALUE;
+        // int min = Integer.MIN_VALUE;
+        // int Final = max-min;
+        // for(int i: nums){
+        //     if(max > i){
+        //         max = i;
+        //     }
+        //     if(min < i){
+        //         min = i;
+        //     }
+
+        // }
+        // return Final;
     }
 }
